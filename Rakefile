@@ -4,3 +4,9 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+begin
+  require 'ajax/tasks'
+rescue Exception => e
+  puts "Warning, couldn't load gem tasks: #{e.message}! Skipping..."
+end

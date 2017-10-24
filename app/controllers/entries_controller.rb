@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :set_entry, only: [:show, :destroy]
 
   # GET /entries
   # GET /entries.json
@@ -19,15 +19,15 @@ class EntriesController < ApplicationController
   # GET /entries/new
   def new
     @entry = Entry.new
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    # respond_to do |format|
+    #   format.html
+    #   format.js
+    # end
   end
 
   # GET /entries/1/edit
   def edit
-    
+     @entry = Entry.find(params[:id])
   end
 
   # POST /entries
@@ -37,13 +37,11 @@ class EntriesController < ApplicationController
 
     respond_to do |format|
       if @entry.save
+        format.js
         format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
-        format.json { render :show, status: :created, location: @entry }
-        format.js   { render action: 'show', status: :created, location: @entry } 
       else
         format.html { render :new }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
-        format.js   { render json: @person.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -51,14 +49,15 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1
   # PATCH/PUT /entries/1.json
   def update
+     @entry = Entry.find(params[:id])
+
     respond_to do |format|
       if @entry.update(entry_params)
+        format.js
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
-        format.json { render :show, status: :ok, location: @entry }
-        
       else
         format.html { render :edit }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -70,7 +69,6 @@ class EntriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to entries_url, notice: 'Entry was successfully destroyed.' }
       format.json { head :no_content }
-     
     end
   end
 

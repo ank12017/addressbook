@@ -1,2 +1,2 @@
-$('<%= escape_javascript(render(:partial => @entry))%>').appendTo('#entries');
-$("#new_entry")[0].reset();
+$("#entries").append("<%= j (render 'entries/entry', entry: @entry)%>");
+$('#entry-form').html("");

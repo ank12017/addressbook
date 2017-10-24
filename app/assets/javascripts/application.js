@@ -10,6 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+function submit_function(form) {
+
+  $.ajax({
+    type: form.method,
+    url: form.action,
+    data: $(form).serialize()
+  });
+
+  return false;
+}
