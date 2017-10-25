@@ -11,30 +11,28 @@
     </tr>
   </thead>
   <tbody>
-
     <% @entries.each do |entry| %>
-     <tr id="<%= dom_id entry %>" >
-  <td><%= entry.name %></td>
-  <td><%= entry.address %></td>
-  <td><%= entry.phone %></td>
-  <td><%= entry.email %></td>
-  <td><%= link_to 'Show', entry %></td>
-  <td>
-    <%= link_to edit_entry_path(entry), remote: true do %>
-      <button>Edit</button>
-    <% end %>
-  </td>
-  <td>
-    <%= link_to entry, remote: true, method: :delete,  data: { confirm: 'Are you sure?' } do %>
-      <button>Delete!</button>
-    <% end %>
-  </td>
-</tr> 
+     <tr id="<%= entry.id %>">
+        <td><%= entry.name %></td>
+        <td><%= entry.address %></td>
+        <td><%= entry.phone %></td>
+        <td><%= entry.email %></td>
+        <td><%= link_to 'Show', entry %></td>
+        <td>
+          <%= link_to edit_entry_path(entry), remote: true do %>
+              <button>Edit</button>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to entry, remote: true, method: :delete,  data: { confirm: 'Are you sure?' } do %>
+            <button>Delete!</button>
+          <% end %>
+        </td>
+     </tr> 
     <% end %>
   </tbody>
 </table>
 <br>
-  
 <div class="row">
   <div class="col-md-5 col-md-offset-1">
     <%= link_to new_entry_path, remote: true do %>
@@ -42,11 +40,11 @@
     <% end %>
   </div>
 </div>
-
+<div id="entries">
+</div>
  <div id="entry-form">
      </div>
-    <div id="enteries">
-    </div>
+    
 
 
 

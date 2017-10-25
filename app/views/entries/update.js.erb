@@ -1,2 +1,2 @@
-$("#entries").replaceWith("<%= j (render 'entries/entry', entry: @entry)%>");
+$("#<%= @entry.id %>").replaceWith("<%= j (render 'entries/entry', entry: @entry)%>");
 $('#entry-form').html("");
