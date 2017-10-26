@@ -11,9 +11,25 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap.min
+//= require modernizr.js
+//= require respond.min
+//= require jquery.cookie
+//= require waypoints.min
+//= require owl.carousel.min
+//= require bootstrap-hover-dropdown
+//= require front
+
+
+
+
+
+
+
 function submit_function(form) {
 
   $.ajax({
