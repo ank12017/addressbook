@@ -10,19 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require bootstrap-sprockets
-//= require rails-ujs
-//= require turbolinks
-//= require_tree .
+//= require jquery-1.11.0.min
+//= require jquery_ujs
 //= require bootstrap.min
-//= require modernizr.js
-//= require respond.min
 //= require jquery.cookie
 //= require waypoints.min
-//= require owl.carousel.min
+//= require modernizr.js
 //= require bootstrap-hover-dropdown
+//= require owl.carousel.min
 //= require front
+//= require respond.min
 
 
 
@@ -30,13 +27,13 @@
 
 
 
-function submit_function(form) {
+// function submit_function(form) {
 
-  $.ajax({
-    type: form.method,
-    url: form.action,
-    data: $(form).serialize()
-  });
+//   $.ajax({
+//     type: form.method,
+//     url: form.action,
+//     data: $(form).serialize()
+//   });
 
-  return false;
-}
+//   return false;
+// }
