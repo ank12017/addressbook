@@ -28,16 +28,16 @@
 
                             <ul class="nav nav-pills nav-stacked">
                                 <li class="active">
-                                    <a href="customer-orders.html"><i class="fa fa-list"></i> My orders</a>
+                                    <%= link_to 'My orders', home_customer_order_path, class: "fa fa-list" %>
                                 </li>
                                 <li>
-                                    <a href="customer-wishlist.html"><i class="fa fa-heart"></i> My wishlist</a>
+                                    <%= link_to 'My wishlist', home_customer_wishlist_path, class: "fa fa-heart" %> 
                                 </li>
                                 <li>
-                                    <a href="customer-account.html"><i class="fa fa-user"></i> My account</a>
+                                    <%= link_to 'My account', home_customer_account_path, class: "fa fa-user" %>
                                 </li>
                                 <li>
-                                    <a href="index.html"><i class="fa fa-sign-out"></i> Logout</a>
+                                    <%= link_to 'Logout', destroy_user_session_path, class: "fa fa-sign-out" %>
                                 </li>
                             </ul>
                         </div>
@@ -72,7 +72,7 @@
                                     <tr>
                                         <td>
                                             <a href="#">
-                                                <img src="img/detailsquare.jpg" alt="White Blouse Armani">
+                                                <%= image_tag "detailsquare.jpg", class: "img-responsive" %>
                                             </a>
                                         </td>
                                         <td><a href="#">White Blouse Armani</a>
@@ -85,7 +85,7 @@
                                     <tr>
                                         <td>
                                             <a href="#">
-                                                <img src="img/basketsquare.jpg" alt="Black Blouse Armani">
+                                                <%= image_tag "basketsquare.jpg", class: "img-responsive" %>
                                             </a>
                                         </td>
                                         <td><a href="#">Black Blouse Armani</a>

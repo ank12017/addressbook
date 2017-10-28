@@ -6,7 +6,7 @@
                 <div class="col-md-12">
 
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Home</a>
+                        <li><%= link_to 'Home', home_index_path %>
                         </li>
                         <li>My wishlist</li>
                     </ul>
@@ -26,16 +26,16 @@
 
                             <ul class="nav nav-pills nav-stacked">
                                 <li class="active">
-                                    <a href="customer-orders.html"><i class="fa fa-list"></i> My orders</a>
+                                    <%= link_to 'My orders', home_customer_order_path, class: "fa fa-list" %>
                                 </li>
                                 <li>
-                                    <a href="customer-wishlist.html"><i class="fa fa-heart"></i> My wishlist</a>
+                                    <%= link_to 'My wishlist', home_customer_wishlist_path, class: "fa fa-heart" %> 
                                 </li>
                                 <li>
-                                    <a href="customer-account.html"><i class="fa fa-user"></i> My account</a>
+                                    <%= link_to 'My account', home_customer_account_path, class: "fa fa-user" %>
                                 </li>
                                 <li>
-                                    <a href="index.html"><i class="fa fa-sign-out"></i> Logout</a>
+                                    <%= link_to 'Logout', destroy_user_session_path, class: "fa fa-sign-out" %>
                                 </li>
                             </ul>
                         </div>
@@ -67,18 +67,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product1.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product1.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product1_2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product1_2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product1.jpg" alt="" class="img-responsive">
+                                    <%= image_tag "product1.jpg", class: "img-responsive" %>
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">Fur coat with very but very very long name</a></h3>
@@ -99,18 +99,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product2_2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product2_2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product2.jpg" alt="" class="img-responsive">
+                                    <%= image_tag "product2.jpg", class: "img-responsive" %>
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">White Blouse Armani</a></h3>
@@ -149,18 +149,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product3.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product3.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product3_2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product3_2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product3.jpg" alt="" class="img-responsive">
+                                    <%= image_tag "product3.jpg", class: "img-responsive" %>
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">Black Blouse Versace</a></h3>
@@ -182,18 +182,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product3.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product1.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product3_2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product1_2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product3.jpg" alt="" class="img-responsive">
+                                    <%= image_tag "product1.jpg", class: "img-responsive" %>
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">Black Blouse Versace</a></h3>
@@ -215,18 +215,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product2_2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product2_2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product2.jpg" alt="" class="img-responsive">
+                                    <%= image_tag "product2.jpg", class: "img-responsive" %>
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">White Blouse Versace</a></h3>
@@ -254,18 +254,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product1.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product1.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product1_2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product1_2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product1.jpg" alt="" class="img-responsive">
+                                    <%= image_tag "product1.jpg", class: "img-responsive" %>
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">Fur coat</a></h3>
@@ -295,18 +295,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product2_2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product2_2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product2.jpg" alt="" class="img-responsive">
+                                    <%= image_tag "product2.jpg", class: "img-responsive" %>
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">White Blouse Armani</a></h3>
@@ -345,18 +345,18 @@
                                     <div class="flipper">
                                         <div class="front">
                                             <a href="detail.html">
-                                                <img src="img/product3.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                         <div class="back">
                                             <a href="detail.html">
-                                                <img src="img/product3_2.jpg" alt="" class="img-responsive">
+                                                <%= image_tag "product2_2.jpg", class: "img-responsive" %>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <a href="detail.html" class="invisible">
-                                    <img src="img/product3.jpg" alt="" class="img-responsive">
+                                    <%= image_tag "product2.jpg", class: "img-responsive" %>
                                 </a>
                                 <div class="text">
                                     <h3><a href="detail.html">Black Blouse Versace</a></h3>

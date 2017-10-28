@@ -7,9 +7,9 @@
 
                     <ul class="breadcrumb">
 
-                        <li><a href="index.html">Home</a>
+                        <li><%= link_to 'Home', home_index_path %>
                         </li>
-                        <li><a href="blog.html">Blog</a>
+                        <li><%= link_to 'Blog', home_blog_path %>
                         </li>
                         <li>Blog post</li>
                     </ul>
@@ -30,7 +30,7 @@
                                 fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
                             <p>
-                                <img src="img/blog2.jpg" class="img-responsive" alt="Example blog post alt">
+                                <%= image_tag "blog2.jpg", class: "img-responsive" %>
                             </p>
 
                             <h2>Header Level 2</h2>
@@ -58,7 +58,7 @@
                             </ul>
 
                             <p>
-                                <img src="img/blog.jpg" class="img-responsive" alt="Example blog post alt">
+                                <%= image_tag "blog.jpg", class: "img-responsive" %>
                             </p>
 
                             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
@@ -76,7 +76,7 @@
                             <div class="row comment">
                                 <div class="col-sm-3 col-md-2 text-center-xs">
                                     <p>
-                                        <img src="img/blog-avatar2.jpg" class="img-responsive img-circle" alt="">
+                                        <%= image_tag "blog-avatar2.jpg", class: "img-responsive img-circle" %>
                                     </p>
                                 </div>
                                 <div class="col-sm-9 col-md-10">
@@ -95,7 +95,7 @@
 
                                 <div class="col-sm-3 col-md-2 text-center-xs">
                                     <p>
-                                        <img src="img/blog-avatar.jpg" class="img-responsive img-circle" alt="">
+                                        <%= image_tag "blog-avatar.jpg", class: "img-responsive img-circle" %>
                                     </p>
                                 </div>
 
@@ -202,7 +202,7 @@
 
                     <div class="banner">
                         <a href="#">
-                            <img src="img/banner.jpg" alt="sales 2014" class="img-responsive">
+                            <%= image_tag "banner.jpg", class: "img-responsive" %>
                         </a>
                     </div>
                 </div>
