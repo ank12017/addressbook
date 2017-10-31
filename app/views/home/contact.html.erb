@@ -70,6 +70,7 @@
                                     <br>
                                     <strong>Great Britain</strong>
                                 </p>
+                                
                             </div>
                             <!-- /.col-sm-4 -->
                             <div class="col-sm-4">
@@ -98,49 +99,58 @@
 
                         </div>
 
+                         
                         <hr>
                         <h2>Contact form</h2>
-
-                        <form>
-                            <div class="row">
+                        <div class="row">
+<%= form_for :test, url: :home_contact_us_mailer, method: 'post' do |f| %>
+                      
+                            
                                 <div class="col-sm-6">
-                                    <div class="form-group">
+                                    
                                         <label for="firstname">Firstname</label>
-                                        <input type="text" class="form-control" id="firstname">
-                                    </div>
+    <%= f.text_field :first_name, class: "form-control"  %>
+                                        
+                                    
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="lastname">Lastname</label>
-                                        <input type="text" class="form-control" id="lastname">
+    <%= f.text_field :last_name, class: "form-control"  %>
+                                        
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="form-group">
+                                    
                                         <label for="email">Email</label>
-                                        <input type="text" class="form-control" id="email">
-                                    </div>
+    <%= f.text_field :email, class: "form-control"  %>
+                                        
+                                    
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="form-group">
+                                    
                                         <label for="subject">Subject</label>
-                                        <input type="text" class="form-control" id="subject">
-                                    </div>
+    <%= f.text_field :subject, class: "form-control"  %><br>
+                                        
+                                    
                                 </div>
-                                <div class="col-sm-12">
-                                    <div class="form-group">
+                                <div class="col-sm-6">
+                                    
                                         <label for="message">Message</label>
-                                        <textarea id="message" class="form-control"></textarea>
-                                    </div>
+     <%= f.text_area :message, class: "form-control"  %><br>
+                                        
+                                    
                                 </div>
 
                                 <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-envelope-o"></i> Send message</button>
+                                <%= f.submit %>
+                                    <i class="fa fa-envelope-o"></i>
 
                                 </div>
+                                <% end %>
                             </div>
                             <!-- /.row -->
-                        </form>
+                       
 
 
                     </div>
@@ -152,3 +162,30 @@
             <!-- /.container -->
         </div>
         <!-- /#content -->
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ46BfH57TltvW_pqOACKtTbyWF7z3i4s&callback=initMap" type="text/javascript"></script>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </div>

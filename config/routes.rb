@@ -25,8 +25,8 @@ Rails.application.routes.draw do
    get 'home/text_right'
    get 'home/error'
   resources :entries 
-   
-  
+
+  post 'home/contact_us_mailer' 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
  

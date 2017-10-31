@@ -61,9 +61,10 @@
                         <span class="sr-only">Toggle search</span>
                         <i class="fa fa-search"></i>
                     </button>
-                    <a class="btn btn-default navbar-toggle" href="basket.html">
-                        <i class="fa fa-shopping-cart"></i>  <span class="hidden-xs">3 items in cart</span>
-                    </a>
+                    
+                    <a class="btn btn-default navbar-toggle" href="#">
+                    <%= link_to '3 items in cart', home_basket_path, class: "fa fa-shopping-cart" %><span class="hidden-xs">
+                    </span></a>
                 </div>
             </div>
             <!--/.navbar-header -->
@@ -231,22 +232,22 @@
                                         <div class="col-sm-3">
                                             <h5>Shop</h5>
                                             <ul>
-                                                <li><a href="index.html">Homepage</a>
+                                                <li><%=link_to "Homepage", home_index_path %>
                                                 </li>
-                                                <li><a href="category.html">Category - sidebar left</a>
+                                                <li><%=link_to "Category - sidebar left", home_category_path %>
                                                 </li>
                                                 <li><%= link_to 'Category - sidebar right', home_category_right_path %></a>
                                                 </li>
                                                 <li><%= link_to 'Category - full width', home_category_full_path %>
                                                 </li>
-                                                <li><a href="detail.html">Product detail</a>
+                                                <li><%=link_to "Product detail", home_detail_path %>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div class="col-sm-3">
                                             <h5>User</h5>
                                             <ul>
-                                                <li><a href="register.html">Register / login</a>
+                                                <li><%=link_to "Register / login", new_user_session_path %>
                                                 </li>
                                                 <li><%= link_to 'Orders history', home_customer_orders_path %>
                                                 </li>
@@ -261,15 +262,15 @@
                                         <div class="col-sm-3">
                                             <h5>Order process</h5>
                                             <ul>
-                                                <li><a href="basket.html">Shopping cart</a>
+                                                <li><%= link_to 'Shopping Cart', home_basket_path %>
                                                 </li>
-                                                <li><a href="checkout1.html">Checkout - step 1</a>
+                                                <li><%= link_to 'Checkout - step 1', home_checkout1_path %>
                                                 </li>
-                                                <li><a href="checkout2.html">Checkout - step 2</a>
+                                                <li><%= link_to 'Checkout - step 2', home_checkout2_path %>
                                                 </li>
-                                                <li><a href="checkout3.html">Checkout - step 3</a>
+                                                <li><%= link_to 'Checkout - step 3', home_checkout3_path %>
                                                 </li>
-                                                <li><a href="checkout4.html">Checkout - step 4</a>
+                                                <li><%= link_to 'Checkout - step 4', home_checkout4_path %>
                                                 </li>
                                             </ul>
                                         </div>
@@ -280,15 +281,15 @@
                                                 </li>
                                                 <li><%= link_to 'Blog-Post', home_post_path %>
                                                 </li>
-                                                <li><a href="faq.html">FAQ</a>
+                                                <li><%= link_to 'FAQ', home_faq_path %>
                                                 </li>
-                                                <li><a href="text.html">Text page</a>
+                                                <li><%= link_to 'Text page', home_text_path %>
                                                 </li>
                                                 <li><%= link_to 'Text page - right sidebar', home_text_right_path %>
                                                 </li>
                                                 <li><%= link_to '404 page', home_error_path %>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a>
+                                                <li><%= link_to 'Contact', home_contact_path %>
                                                 </li>
                                             </ul>
                                         </div>

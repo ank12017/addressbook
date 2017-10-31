@@ -41,5 +41,12 @@ class HomeController < ApplicationController
   end
   def error
   end
-
+  def contact_us_mailer
+    @email = params[:email]
+    @first_name = params[:first_name]
+    @last_name = params[:last_name]
+    @subject = params[:subject]
+    @message = params[:message]
+    UserMailer.welcome_email(user).deliver_now if user_signed_in? 
+   end 
 end
