@@ -76,11 +76,12 @@
                             <!-- /.content -->
 
                             <div class="box-footer">
-                                <div class="pull-left">
-                                    <a href="basket.html" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to Addresses</a>
+                                <div class="pull-left"><i class="fa fa-chevron-left">
+                                <%= link_to 'Back to Addresses', home_basket_path,class: "btn btn-default" %>
+                                    </i>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="checkout3.html" class="btn btn-primary">Continue to Payment Method<i class="fa fa-chevron-right"></i>
+                                    <%= link_to 'Continue to Payment Method', home_checkout3_path,class: "btn btn-primary" %><i class="fa fa-chevron-right"></i>
                                     </a>
                                 </div>
                             </div>

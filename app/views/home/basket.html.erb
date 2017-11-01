@@ -79,12 +79,13 @@
 
                             <div class="box-footer">
                                 <div class="pull-left">
-                                    <a href="category.html" class="btn btn-default">
-                                    <i class="fa fa-chevron-left"></i> Continue shopping</a>
+                                   <i class="fa fa-chevron-left">
+                                    <%= link_to 'Continue shopping', home_category_path,class: "btn btn-default" %>
+                                    </i>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="checkout1.html" class="btn btn-default"><i class="fa fa-refresh"></i> Update basket</a>
-                                    <a href="checkout1.html" class="btn btn-primary">Proceed to checkout <i class="fa fa-chevron-right"></i>
+                                    <i class="fa fa-refresh"> <%= link_to 'Update basket', home_checkout1_path,class: "btn btn-default" %></i> 
+                                    <%= link_to 'Proceed to checkout', home_checkout1_path,class: "btn btn-primary" %> <i class="fa fa-chevron-right"></i>
                                     </a>
                                 </div>
                             </div>

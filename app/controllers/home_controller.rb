@@ -42,11 +42,13 @@ class HomeController < ApplicationController
   def error
   end
   def contact_us_mailer
-    @email = params[:email]
-    @first_name = params[:first_name]
-    @last_name = params[:last_name]
-    @subject = params[:subject]
-    @message = params[:message]
-    UserMailer.welcome_email(user).deliver_now if user_signed_in? 
-   end 
+    @email = params[:test][:email]
+    @first_name = params[:test][:first_name]
+    @last_name = params[:test][:last_name]
+    @subject = params[:test][:subject]
+    @message = params[:test][:message]
+    @user = User.create(first_name: @first_name, last_name: @last_name, subject: @subject, message: @message, email: @email, password: "12345678")
+    UserMailer.welcome_email(@user).deliver_now
+    redirect_to root_path
+  end 
 end

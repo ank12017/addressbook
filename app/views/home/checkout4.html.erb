@@ -82,7 +82,9 @@
 
                             <div class="box-footer">
                                 <div class="pull-left">
-                                    <a href="checkout3.html" class="btn btn-default"><i class="fa fa-chevron-left"></i>Back to Payment method</a>
+                                <i class="fa fa-chevron-left">
+                                   <%= link_to 'Back to Payment method', home_basket_path, class: "btn btn-default" %>
+                                    </i>
                                 </div>
                                 <div class="pull-right">
                                     <button type="submit" class="btn btn-primary">Place an order<i class="fa fa-chevron-right"></i>
