@@ -50,5 +50,5 @@ class HomeController < ApplicationController
     @user = User.create(first_name: @first_name, last_name: @last_name, subject: @subject, message: @message, email: @email, password: "12345678")
     UserMailer.welcome_email(@user).deliver_now
     redirect_to root_path
-  end 
+end 
 end

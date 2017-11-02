@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :contacts
   resources :products
-  devise_for :users
-
+  devise_for :users, controllers: { registration: 'users/registrations' }
+  resources :entries 
   get 'home/index'
   root 'home#index'
    get 'home/contact'
@@ -25,8 +26,7 @@ Rails.application.routes.draw do
    get 'home/post'
    get 'home/text_right'
    get 'home/error'
-  resources :entries 
-
+  
   post 'home/contact_us_mailer' 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

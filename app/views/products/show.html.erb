@@ -1,4 +1,4 @@
 <p id="notice"><%= notice %></p>
-<%= image_tag @product if @profile.avatar.present? %>
+<%= image_tag @product.avatar.url %>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
