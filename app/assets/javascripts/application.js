@@ -22,7 +22,7 @@
 //= require owl.carousel.min
 //= require front
 //= require respond.min
-
+//= require cocoon
 
 
 

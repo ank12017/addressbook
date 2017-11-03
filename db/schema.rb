@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171102105000) do
+ActiveRecord::Schema.define(version: 20171103111318) do
+
+  create_table "avatars", force: :cascade do |t|
+    t.string "avatar"
+    t.string "avatarable_type"
+    t.integer "avatarable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
@@ -37,10 +45,38 @@ ActiveRecord::Schema.define(version: 20171102105000) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "order_items", force: :cascade do |t|
+    t.integer "product_id"
+    t.integer "order_id"
+    t.float "unit_price"
+    t.integer "quantity"
+    t.float "total_price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
+  end
+
+  create_table "order_statuses", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.float "subtotal"
+    t.float "shipping"
+    t.float "total"
+    t.float "tax"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "price"
+    t.string "title"
   end
 
   create_table "users", force: :cascade do |t|

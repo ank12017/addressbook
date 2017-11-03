@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
-<%= image_tag @product.avatar.url %>
+<% @product.avatars.each do |avatar| %>
+	<%= image_tag avatar.avatar_url %>
+<% end %>
+<%= @product.title %>
+<%= @product.price %>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

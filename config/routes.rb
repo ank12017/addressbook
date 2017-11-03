@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :products
   devise_for :users, controllers: { registration: 'users/registrations' }
   resources :entries 
+  resource :cart, only: [:show]
+  resources :order_items, only: [:create, :update, :destroy]
+  root 'products#index'
+  resources :orders
   get 'home/index'
   root 'home#index'
    get 'home/contact'
@@ -15,7 +19,6 @@ Rails.application.routes.draw do
    get 'home/checkout2'
    get 'home/checkout3'
    get 'home/checkout4'
-   get 'home/detail'
    get 'home/category_right'
    get 'home/category_full'
    get 'home/customer_order'
